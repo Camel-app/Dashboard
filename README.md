@@ -1,7 +1,22 @@
+# Camel Dashboard
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+To allow easy manipulations of CAM experiments through the API, we developped a dashboard handling the basic administration operations.
+
+## Configuration
+
+To properly run, a .env file is needed with the following information:
+
+```
+DEV_URL=
+```
+
+where the DEV_URL is the link to the API.
+
+## Run
+
+To start the server locally, ru the following command in a terminal:
 
 ```bash
 npm run dev
