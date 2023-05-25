@@ -20,7 +20,7 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: theme.spacing.xl * 2,
     },
 
-    content: {
+    contentNextImage: {
         maxWidth: 480,
         marginRight: theme.spacing.xl * 3,
 
@@ -30,10 +30,23 @@ const useStyles = createStyles((theme) => ({
         },
     },
 
+
+    contentBelowImage: {
+        //marginLeft: 100,
+        maxWidth: 960,
+        marginRight: theme.spacing.xl * 3,
+
+        [theme.fn.smallerThan('md')]: {
+            maxWidth: '100%',
+            marginRight: 0,
+        },
+    },
+
+    
     title: {
         color: theme.colorScheme === 'dark' ? theme.white : theme.black,
         fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        fontSize: 44,
+        fontSize: 40,
         lineHeight: 1.2,
         fontWeight: 900,
 
@@ -54,13 +67,16 @@ const useStyles = createStyles((theme) => ({
         [theme.fn.smallerThan('md')]: {
             display: 'none',
         },
+        marginTop: 'auto',
+        marginBlockEnd: 'auto'
     },
 
     highlight: {
+        fontSize: 46,
         position: 'relative',
         //backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
         borderRadius: theme.radius.sm,
-        padding: '4px 12px',
+        // padding: '4px 12px',
     },
 }));
 
@@ -70,16 +86,19 @@ export function HeroBullets() {
         <div>
             <Container>
                 <div className={classes.inner}>
-                    <div className={classes.content}>
+                    <div className={classes.contentNextImage}>
                         <Title className={classes.title}>
-                            A <span className={classes.highlight}>Cognitive Affective Map tool</span> to easily create and integrate CAM studies into online experiments.
+                            <span className={classes.highlight}>Cognitive Affective Map tools</span> to easily create and integrate CAM studies into online experiments.
                         </Title>
                         <Text color="dimmed" mt="md">
-                            Build fully functional accessible web applications faster than ever – Mantine includes
-                            more than 120 customizable components and hooks to cover you in any situation
+                            Build fully functional accessible Cognitive Affective Map experiments faster than ever.
                         </Text>
-
-                        <List
+                    </div>
+                    <Image src={image.src} className={classes.image} />
+                </div>
+                <div className={classes.inner}>
+                <div className={classes.contentBelowImage}>
+                           <List
                             mt={30}
                             spacing="sm"
                             size="sm"
@@ -93,25 +112,28 @@ export function HeroBullets() {
                                 <b>Online based</b> – all our tools are running online so no need to setup any server (although you could)
                             </List.Item>
                             <List.Item>
-                                <b>Free and open source</b> – all packages have MIT license, you can use Camel in
+                                <b>Free and open source</b> – all packages have MIT license, you can use the CAM tools in
                                 any project, just don't forget to quote us
                             </List.Item>
                             <List.Item>
-                                <b>Tested in laboratory</b> – all the different tools provided were tested to ensure they answered needs for cam studies
+                                <b>Tested systematically</b> – all the different tools provided were tested to ensure best data quality
                             </List.Item>
                         </List>
 
                         <Group mt={30}>
+                        <a key='More information' href='/information' target='_self'>
                             <Button radius="xl" size="md" className={classes.control}>
-                                Get started
+                                More information
                             </Button>
+                            </a>
+                            <a key='Source code' href='https://github.com/Camel-app?tab=repositories' target='_blank'>
                             <Button variant="default" radius="xl" size="md" className={classes.control}>
                                 Source code
                             </Button>
+                            </a>
                         </Group>
                     </div>
-                    <Image src={image.src} className={classes.image} />
-                </div>
+                    </div>
             </Container>
         </div>
     );
