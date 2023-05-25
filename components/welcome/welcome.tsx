@@ -10,6 +10,7 @@ import {
     ThemeIcon,
 } from '@mantine/core';
 import { IconCheck } from '@tabler/icons';
+import image from '../../public/logoCAM2.svg';
 
 const useStyles = createStyles((theme) => ({
     inner: {
@@ -94,6 +95,7 @@ export function HeroBullets() {
                             more than 120 customizable components and hooks to cover you in any situation
                         </Text>
                     </div>
+                    <Image src={image.src} className={classes.image} />
                 </div>
                 <div className={classes.inner}>
                 <div className={classes.contentBelowImage}>
