@@ -91,8 +91,7 @@ export function HeroBullets() {
                             <span className={classes.highlight}>Cognitive Affective Map tools</span> to easily create and integrate CAM studies into online experiments.
                         </Title>
                         <Text color="dimmed" mt="md">
-                            Build fully functional accessible web applications faster than ever – Mantine includes
-                            more than 120 customizable components and hooks to cover you in any situation
+                            Build fully functional accessible Cognitive Affective Map experiments faster than ever.
                         </Text>
                     </div>
                     <Image src={image.src} className={classes.image} />
