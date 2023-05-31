@@ -143,7 +143,7 @@ const Information = () => {
                                     for setting up studys with different designs and preprocessing steps: administrative panel (you are currently on)
                                     </List.Item>
                                 </List>
-                                For detailed information and how to register have a look in our <a key='Documentation' href='https://github.com/Camel-app?tab=repositories' target='_blank'>
+                                For detailed information and how to register have a look in our <a key='Documentation' href='https://camtools-documentation.readthedocs.io/en/master/Set%20up%20study/' target='_blank'>
                                 <span className={classes.internalLinks}>
                                 Documentation
                                 </span>
