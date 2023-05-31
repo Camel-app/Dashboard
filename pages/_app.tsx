@@ -9,8 +9,8 @@ import HeaderSimple from "../components/header/Header";
 function MyApp({ Component, pageProps }: AppProps) {
 
     const data_footer = [
-        { link: '', label: 'Made by Julius Fenn and Florian Gouret' },
-        { link: '', label: 'Code source' },
+        { link: '/', label: 'Made by Julius Fenn and Florian Gouret (server administration supported by  Paul Hüttner; project supervised by Prof. Andrea Kiesel)' },
+        { link: '/impressum', label: 'Impressum (Notice)' },
     ];
 
     return (
