@@ -23,6 +23,12 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: theme.spacing.xl * 2,
     },
 
+    listItems:{
+        fontSize: 24,
+        [theme.fn.smallerThan('xs')]: {
+            fontSize: 16,
+        },
+    },
 
     contentBelowImage: {
         //marginLeft: 100,
@@ -44,6 +50,7 @@ const useStyles = createStyles((theme) => ({
             maxWidth: '100%',
             marginRight: 0,
         },
+        fontSize: 24,
     },
     
     title: {
@@ -131,6 +138,7 @@ const Information = () => {
                                             <IconArrowAutofitRight size={12} stroke={1.5} />
                                         </ThemeIcon>
                                     }
+                                    className={classes.listItems}
                                 >
                                     <List.Item>
                                     for data collection: Cognitive-Affective Map extended logic (C.A.M.E.L.)
@@ -164,6 +172,7 @@ const Information = () => {
                                             <IconArrowAutofitRight size={12} stroke={1.5} />
                                         </ThemeIcon>
                                     }
+                                    className={classes.listItems}
                                 >
                                     <List.Item>
                                         It is possible to set up CAM studies using a visual interface and all kind of adjustements are possible 
@@ -205,6 +214,7 @@ const Information = () => {
                                             <IconArrowAutofitRight size={12} stroke={1.5} />
                                         </ThemeIcon>
                                     }
+                                    className={classes.listItems}
                                 >
                                     <List.Item>
                                     There are no limits: If it's possible on a web page, you can theoretically implement it in the C.A.M.E.L. software.
@@ -234,6 +244,7 @@ const Information = () => {
                                             <IconArrowAutofitRight size={12} stroke={1.5} />
                                         </ThemeIcon>
                                     }
+                                    className={classes.listItems}
                                 >
                                     <List.Item>
                                     Learn the <a key='theoretical background' href='https://camtools-documentation.readthedocs.io/en/master/Cognitive-Affective%20Maps/#what-are-cognitive-affective-maps' target='_blank'>
@@ -264,7 +275,8 @@ const Information = () => {
                                         <ThemeIcon size={20} radius="xl">
                                             <IconHelp size={12} stroke={1.5} />
                                         </ThemeIcon>
-                                    }>
+                                    }
+                                    className={classes.listItems}>
                                     You'll always find friendly people <a key='in our Slack channel' href='https://join.slack.com/t/cognitiveaffe-um96332/shared_invite/zt-1cybwr0tf-u2PWQh4L3BP3tuxLuH4c5w' target='_blank'>
                                 <span className={classes.internalLinks}>
                                 in our Slack channel
@@ -276,7 +288,8 @@ const Information = () => {
                                         <ThemeIcon size={20} radius="xl">
                                             <IconUsers size={12} stroke={1.5} />
                                         </ThemeIcon>
-                                    }>
+                                    }
+                                    className={classes.listItems}>
                                     Learning to build Cognitive-Affective Maps studies is most fun in a group. We offer workshops tailored to your needs
                                     (send an E-Mail to: <a key='Email' href='mailto:cam.contact@drawyourminds.de'>
                                 <span className={classes.internalLinks}>
@@ -289,7 +302,8 @@ const Information = () => {
                                         <ThemeIcon size={20} radius="xl">
                                             <IconPhoneCalling size={12} stroke={1.5} />
                                         </ThemeIcon>
-                                    }>
+                                    }
+                                    className={classes.listItems}>
                                     Whether you're in a hurry or looking for a custom study, we'll find an expert to help you. Please get in touch 
                                     (send an E-Mail to: <a key='Email' href='mailto:cam.contact@drawyourminds.de'>
                                 <span className={classes.internalLinks}>

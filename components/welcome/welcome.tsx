@@ -20,6 +20,13 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: theme.spacing.xl * 2,
     },
 
+    listItems:{
+        fontSize: 24,
+        [theme.fn.smallerThan('xs')]: {
+            fontSize: 16,
+        },
+    },
+
     contentNextImage: {
         maxWidth: 480,
         marginRight: theme.spacing.xl * 3,
@@ -107,6 +114,7 @@ export function HeroBullets() {
                                     <IconCheck size={12} stroke={1.5} />
                                 </ThemeIcon>
                             }
+                            className={classes.listItems}
                         >
                             <List.Item>
                                 <b>Online based</b> – all our tools are running online so no need to setup any server (although you could)
