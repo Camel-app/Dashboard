@@ -23,7 +23,7 @@ const useStyles = createStyles((theme) => ({
         }},
 		
 		internalLinks: {
-			color: 'blue',
+			color: 'black',
 			textDecoration: 'underline'
 		},
 }));
