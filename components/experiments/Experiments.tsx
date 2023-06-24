@@ -79,36 +79,6 @@ const Experiments = ({ data }) => {
 				</tbody>
 			</Table>
 			<UploadForm />
-			
-			<div className={classes.inner}>
-			Using this dashboard it is possible to: 
-			<List
-				mt={30}
-				spacing="sm"
-				size="sm"
-				icon={
-					<ThemeIcon size={20} radius="xl">
-						<IconArrowRight size={12} stroke={1.5} />
-					</ThemeIcon>
-				}
-			>
-				<List.Item>
-					Add experiment: create a CAM experiment by defining the desired parameters of your CAM study
-				</List.Item>
-				<List.Item>
-					Copy link: send the link of your experiment directly to participants or use the link within an online-experiment 
-					(add a unique participant ID to your CAMs)
-				</List.Item>
-				<List.Item>
-					Status: set the status of your experiment (it is only possible to participate in active experiments)
-				</List.Item>
-			</List>
-			</div>
-			For detailed information  how to set up an experiment have a look in our <a key='Documentation Set Up' href='https://camtools-documentation.readthedocs.io/en/master/Set%20up%20study/#general-procedure' target='_blank'>
-                                <span className={classes.internalLinks}>
-                                Documentation
-                                </span>
-                                </a>
 		</div>
 	);
 }
