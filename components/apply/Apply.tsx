@@ -120,7 +120,7 @@ const ApplyAccount = () => {
     );	
 }
 
+
+
+
 export default ApplyAccount;
-
-
-
