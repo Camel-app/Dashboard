@@ -79,7 +79,7 @@ export default function HeaderSimple() {
   const links = getNavbar(cookie?.auth ? true : false)
 
   const items = links.map((link) => (
-    <a key={link.label} href={link.link} className={cx(classes.link)}>
+    <a key={link.label} href={link.link} className={cx(classes.link)} target={link.target}>
       {link.label}
     </a>
   ));
@@ -87,7 +87,9 @@ export default function HeaderSimple() {
   return (
     <Header height={60} mb={120}>
       <Container className={classes.header}>
-        <Text size="xl">CAMEL</Text>
+      <a key='CAM tools' href='/' target='_self'>
+          <Text size="xl">CAM tools</Text>
+        </a>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>

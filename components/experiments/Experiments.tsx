@@ -1,4 +1,6 @@
-import { Table, Text, Loader, Badge, Button, Alert } from '@mantine/core';
+import { Table, Text, Loader, Badge, Button, Alert, List, ThemeIcon, createStyles } from '@mantine/core';
+import { IconArrowRight } from '@tabler/icons';
+
 import { BsClipboardData } from "react-icons/bs";
 import Link from 'next/link';
 import copyToClipboard from '../../controllers/copyClipboard';
@@ -6,7 +8,29 @@ import UploadForm from '../uploadForm/UploadForm';
 import getConfig from 'next/config';
 const { publicRuntimeConfig } = getConfig();
 
+
+const useStyles = createStyles((theme) => ({
+    inner: {
+        //marginLeft: 100,
+		paddingTop: theme.spacing.xl * 2,
+		paddingBottom: theme.spacing.xl * 1,
+        maxWidth: 960,
+        marginRight: theme.spacing.xl * 3,
+
+        [theme.fn.smallerThan('md')]: {
+            maxWidth: '100%',
+            marginRight: 0,
+        }},
+		
+		internalLinks: {
+			color: 'black',
+			textDecoration: 'underline'
+		},
+}));
+
+
 const Experiments = ({ data }) => {
+	const { classes } = useStyles();
 
 	const linkApi = publicRuntimeConfig.DEV_URL;
 
@@ -20,7 +44,6 @@ const Experiments = ({ data }) => {
 
 	return (
 		<div style={{ paddingTop: 30, width: "80%", textAlign: "left", margin: "auto" }}>
-
 			<Table striped highlightOnHover >
 				<thead>
 					<tr>

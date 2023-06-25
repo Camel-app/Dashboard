@@ -20,6 +20,13 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: theme.spacing.xl * 2,
     },
 
+    listItems:{
+        fontSize: 24,
+        [theme.fn.smallerThan('xs')]: {
+            fontSize: 16,
+        },
+    },
+
     contentNextImage: {
         maxWidth: 480,
         marginRight: theme.spacing.xl * 3,
@@ -91,7 +98,7 @@ export function HeroBullets() {
                             <span className={classes.highlight}>Cognitive Affective Map tools</span> to easily create and integrate CAM studies into online experiments.
                         </Title>
                         <Text color="dimmed" mt="md">
-                            Build fully functional accessible Cognitive Affective Map experiments faster than ever.
+                            Build fully functional accessible Cognitive Affective Map experiments faster than ever!
                         </Text>
                     </div>
                     <Image src={image.src} className={classes.image} />
@@ -107,6 +114,7 @@ export function HeroBullets() {
                                     <IconCheck size={12} stroke={1.5} />
                                 </ThemeIcon>
                             }
+                            className={classes.listItems}
                         >
                             <List.Item>
                                 <b>Online based</b> – all our tools are running online so no need to setup any server (although you could)

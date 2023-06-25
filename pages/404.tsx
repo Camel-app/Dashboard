@@ -50,9 +50,11 @@ export default function NotFoundTitle() {
                 been moved to another URL.
             </Text>
             <Group position="center">
-                <Button variant="subtle" size="md">
-                    Take me back to home page
-                </Button>
+                <a key='back to homepage' href='/' target='_self'>
+                    <Button variant="subtle" size="md">
+                        Take me back to home page
+                    </Button>
+                </a>
             </Group>
         </Container>
     );
