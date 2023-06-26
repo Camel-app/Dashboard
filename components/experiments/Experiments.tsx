@@ -1,7 +1,7 @@
 import { Table, Text, Loader, Badge, Button, Alert, List, ThemeIcon, createStyles } from '@mantine/core';
 import { IconArrowRight } from '@tabler/icons';
 
-import { BsClipboardData } from "react-icons/bs";
+import { BsClipboardData, BsDoorOpen } from "react-icons/bs";
 import Link from 'next/link';
 import copyToClipboard from '../../controllers/copyClipboard';
 import UploadForm from '../uploadForm/UploadForm';
@@ -21,11 +21,9 @@ const useStyles = createStyles((theme) => ({
             maxWidth: '100%',
             marginRight: 0,
         }},
-		
-		internalLinks: {
-			color: 'black',
-			textDecoration: 'underline'
-		},
+		button: {
+			fontSize: "14px"
+		}
 }));
 
 
@@ -52,7 +50,7 @@ const Experiments = ({ data }) => {
 						<th>Status</th>
 						<th>Collected</th>
 						<th>Link for participants</th>
-						<th>Data</th>
+						<th>Go to</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -65,11 +63,11 @@ const Experiments = ({ data }) => {
 									<td><Badge variant="outline" color={mapColor[element.status]}>{element.status}</Badge></td>
 									<td>{element.numberCams}</td>
 									<td>
-										<Button leftIcon={<BsClipboardData />} variant="subtle" onClick={() => { copyToClipboard(element._id, linkApi) }}>Copy link</Button>
+										<Button leftIcon={<BsClipboardData />} variant="subtle" onClick={() => { copyToClipboard(element._id, linkApi) }} className={classes.button}>Copy link</Button>
 									</td>
 									<td>
 										<Link href={"/experiment?id=" + element._id} passHref>
-											<Button leftIcon={<BsClipboardData />} variant="subtle"></Button>
+											<Button leftIcon={<BsDoorOpen />} variant="subtle" className={classes.button}>Enter experiment</Button>
 										</Link>
 									</td>
 								</tr>
