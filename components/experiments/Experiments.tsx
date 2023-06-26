@@ -52,7 +52,7 @@ const Experiments = ({ data }) => {
 						<th>Status</th>
 						<th>Collected</th>
 						<th>Link for participants</th>
-						<th>Data</th>
+						<th>Go to</th>
 					</tr>
 				</thead>
 				<tbody>
