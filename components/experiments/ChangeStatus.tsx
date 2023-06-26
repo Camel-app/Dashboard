@@ -34,6 +34,26 @@ async function downloadData(props, cookie) {
     URL.revokeObjectURL(blobUrl);
 }
 
+async function deleteExperiment(props, cookie) {
+    const experimentId = props.experimentId;
+    let info = {
+        method: 'POST',
+        body: JSON.stringify({
+            jwt: cookie.auth,
+            id: experimentId
+        }),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        }
+    }
+    const res = await fetch(publicRuntimeConfig.DEV_URL + '/researchers/deleteExperiment', info);
+    const resData = await res.json();
+    console.log(resData);
+    
+
+}
+
 const ChangeExperimentStatus = (props) => {
     const [opened, setOpened] = useState(false);
     const [cookie, setCookie] = useCookies(["auth"]);
@@ -45,7 +65,7 @@ const ChangeExperimentStatus = (props) => {
             </Modal>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
                 <Button variant="outline" onClick={() => setOpened(true)}>Change status</Button>
-                <Button variant="outline" onClick={() => console.log("implement me")} style={{color: "red", borderColor: "red"}}>Delete Experiment</Button>
+                <Button variant="outline" onClick={() => deleteExperiment(props, cookie)} style={{color: "red", borderColor: "red"}}>Delete Experiment</Button>
                 <Button variant="outline" onClick={() => downloadData(props, cookie)}>Download data</Button>
             </div>
         </>
