@@ -45,6 +45,7 @@ const ChangeExperimentStatus = (props) => {
             </Modal>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
                 <Button variant="outline" onClick={() => setOpened(true)}>Change status</Button>
+                <Button variant="outline" onClick={() => console.log("implement me")} style={{color: "red", borderColor: "red"}}>Delete Experiment</Button>
                 <Button variant="outline" onClick={() => downloadData(props, cookie)}>Download data</Button>
             </div>
         </>
