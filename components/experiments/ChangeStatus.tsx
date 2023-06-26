@@ -4,7 +4,9 @@ import { Modal, Button } from '@mantine/core';
 import ChangeStatusModal from "../modals/ChangeStatusModal";
 import getConfig from "next/config";
 const { publicRuntimeConfig } = getConfig();
-import { redirect } from 'next/navigation';
+//import { useRouter } from 'next/router';
+
+
 
 
 async function downloadData(props, cookie) {
@@ -62,10 +64,13 @@ function confirmDeleteExperiment(props, cookie) {
     var resp = window.prompt('Please enter the name of your experiment to confirm the deletion and press "Ok":')
     console.log("resp:", resp);
 
+    //const router = useRouter();
+
     if(resp === document.getElementsByTagName("h1")[0].textContent){
         console.log("delete");
         deleteExperiment(props, cookie);
-        redirect('/dashboard');
+
+        //router.push('/dashboard');
     }else{
         console.log("not delete");
     }
