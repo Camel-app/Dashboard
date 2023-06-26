@@ -2,7 +2,7 @@ import { Table } from '@mantine/core';
 
 const Participants = ({ data }) => {
 
-	console.log(data);
+	console.log("data:", data);
 
 
 	function getRows(data) {

@@ -4,6 +4,7 @@ import { Modal, Button } from '@mantine/core';
 import ChangeStatusModal from "../modals/ChangeStatusModal";
 import getConfig from "next/config";
 const { publicRuntimeConfig } = getConfig();
+import { redirect } from 'next/navigation';
 
 
 async function downloadData(props, cookie) {
@@ -34,6 +35,8 @@ async function downloadData(props, cookie) {
     URL.revokeObjectURL(blobUrl);
 }
 
+
+
 async function deleteExperiment(props, cookie) {
     const experimentId = props.experimentId;
     let info = {
@@ -54,6 +57,20 @@ async function deleteExperiment(props, cookie) {
 
 }
 
+
+function confirmDeleteExperiment(props, cookie) {
+    var resp = window.prompt('Please enter the name of your experiment to confirm the deletion and press "Ok":')
+    console.log("resp:", resp);
+
+    if(resp === document.getElementsByTagName("h1")[0].textContent){
+        console.log("delete");
+        deleteExperiment(props, cookie);
+        redirect('/dashboard');
+    }else{
+        console.log("not delete");
+    }
+  }
+
 const ChangeExperimentStatus = (props) => {
     const [opened, setOpened] = useState(false);
     const [cookie, setCookie] = useCookies(["auth"]);
@@ -65,7 +82,7 @@ const ChangeExperimentStatus = (props) => {
             </Modal>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
                 <Button variant="outline" onClick={() => setOpened(true)}>Change status</Button>
-                <Button variant="outline" onClick={() => deleteExperiment(props, cookie)} style={{color: "red", borderColor: "red"}}>Delete Experiment</Button>
+                <Button variant="outline" onClick={() => confirmDeleteExperiment(props, cookie)} style={{color: "red", borderColor: "red"}}>Delete Experiment</Button>
                 <Button variant="outline" onClick={() => downloadData(props, cookie)}>Download data</Button>
             </div>
         </>
