@@ -19,9 +19,8 @@ where the DEV_URL is the link to the API.
 To start the server locally, ru the following command in a terminal:
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm run build
+npm run start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
