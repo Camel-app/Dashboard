@@ -69,8 +69,8 @@ const UploadForm = () => {
 
 					<JsonInput
 						required
-						placeholder="Paste your cam model here"
-						label="Paste your cam model here:"
+						placeholder="Paste your configured CAM here (gear symbol C.A.M.E.L.)"
+						label="Paste your configured CAM here:"
 						validationError="Invalid json"
 						radius="md"
 						id="jsonCAM"
@@ -88,7 +88,7 @@ const UploadForm = () => {
 						// adapt the name-content
 						id="nameExp"
 						value={link}
-						placeholder="Link to redirect participants at the end"
+						placeholder="Link to redirect participants after they drawing their CAM"
 						onChange={(event) => setLink(event.currentTarget.value)}
 					/>
 
