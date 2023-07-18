@@ -83,7 +83,7 @@ const UploadForm = () => {
 
 
 					<TextInput
-						required
+						// required
 						label="Redirect link"
 						// adapt the name-content
 						id="nameExp"
