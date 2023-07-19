@@ -63,7 +63,7 @@ const UploadForm = () => {
 						label="Name"
 						id="nameExp"
 						value={nameExp}
-						placeholder="Name of the experiment"
+						placeholder="Name of the CAM study"
 						onChange={(event) => setNameExp(event.currentTarget.value)}
 					/>
 
