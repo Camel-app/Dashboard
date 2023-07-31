@@ -16,5 +16,4 @@ export default function getNavbar(isLoggedin: boolean) {
         { link: '/apply', label: 'Apply account', target: "_self"},
         { link: '/register', label: 'Log in', target: "_self"},
     ];
-
 }

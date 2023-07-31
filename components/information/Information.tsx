@@ -147,7 +147,7 @@ const Information = () => {
                                     for data analysis: CAM-App (Shiny)
                                     </List.Item>
                                     <List.Item>
-                                    for setting up studys with different designs and preprocessing steps: administrative panel (you are currently on)
+                                    for setting up studies with different designs and preprocessing steps: administrative panel (you are currently on)
                                     </List.Item>
                                 </List>
                                 For detailed information and how to register have a look in our <a key='Documentation' href='https://camtools-documentation.readthedocs.io/en/master/Set%20up%20study/' target='_blank'>
@@ -175,7 +175,7 @@ const Information = () => {
                                     className={classes.listItems}
                                 >
                                     <List.Item>
-                                        It is possible to set up CAM studies using a visual interface and all kind of adjustements are possible 
+                                        It is possible to set up CAM studies using a visual interface and all kind of adjustments are possible 
                                         (see <a key='Config file documentation' href='https://camtools-documentation.readthedocs.io/en/master/Cognitive-Affective%20Map%20extended%20logic/#define-your-config-file' target='_blank'>
                                 <span className={classes.internalLinks}>
                                 Config file documentation
@@ -190,7 +190,7 @@ const Information = () => {
                                 </a>).
                                     </List.Item>
                                     <List.Item>
-                                        Using the visual interface of the CAM-App data can be easly summarized and analyzed (see <a key='CAM-App documentation' href='https://camtools-documentation.readthedocs.io/en/master/CAM-App/' target='_blank'>
+                                        Using the visual interface of the CAM-App data can be easily summarized and analyzed (see <a key='CAM-App documentation' href='https://camtools-documentation.readthedocs.io/en/master/CAM-App/' target='_blank'>
                                 <span className={classes.internalLinks}>
                                 CAM-App documentation
                                 </span>
@@ -255,8 +255,7 @@ const Information = () => {
                                         <span className={classes.internalLinks}>
                                         how this method can help you
                                             </span>
-                                </a>
-                                 with your research.
+                                </a> with your research.
                                     </List.Item>
                                     <List.Item>
                                     Watch our introductory video online and build your first study after we have generated an account for you in minutes.
