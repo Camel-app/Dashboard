@@ -79,11 +79,14 @@ const Register = () => {
 							Login/password are not matching
 						</Text>}
 						{isLoading &&
-							<Loader />
+							<Loader/>
 						}
 						<Button id="submit" type="submit">Log in</Button>
 					</div>
-
+					<Space h="xl" />
+					<div style={{ display: "flex", justifyContent: "left", fontStyle: "italic", fontSize: "12px"}}>
+					If you have problems logging in and out, check if you block coockies (for example, with Ghostery).
+					</div>
 				</form>
 			</div>
 		</>
