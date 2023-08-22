@@ -98,6 +98,7 @@ const ApplyAccount = () => {
           Private Company, Student or Somewhere else):
         </li>
         <li>What is your aim in using Cognitive-Affective Maps:</li>
+        <li>Do you want to receive regular emails about CAM tools updates (Yes / No):</li>
         <li>Anything to add (do you need any support, remarks, ..):</li>
       </ul>
     </div>
