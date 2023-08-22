@@ -76,6 +76,9 @@ const Experiments = ({ data }) => {
 					}
 				</tbody>
 			</Table>
+			<div style={{ paddingTop: 10, width: "80%", textAlign: "center", margin: "auto" , fontSize: "14px", fontStyle: "italic"}}>
+			You may need to refresh the browser window after creating an experiment.
+			</div>
 			<UploadForm />
 		</div>
 	);
