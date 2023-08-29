@@ -134,7 +134,7 @@ export function HeroBullets() {
                                 More information
                             </Button>
                             </a>
-                            <a key='Source code' href='https://github.com/Camel-app?tab=repositories' target='_blank'>
+                            <a key='Source code' href='https://github.com/Camel-app' target='_blank'>
                             <Button variant="default" radius="xl" size="md" className={classes.control}>
                                 Source code
                             </Button>
