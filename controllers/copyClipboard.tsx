@@ -1,5 +1,5 @@
 export default function copyToClipboard(element, link) {
-    const url = "https://camgalaxy.github.io/static/?link=" + link + "/participants/getOneExperiment?id=" + element + "&participantID="
+    const url = "https://drawyourminds.de/DC/?link=" + link + "/participants/getOneExperiment?id=" + element + "&participantID="
     console.log(url);
     navigator.clipboard.writeText(url);
 }
