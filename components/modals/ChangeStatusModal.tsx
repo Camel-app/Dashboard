@@ -9,7 +9,7 @@ const ChangeStatusModal = (props) => {
 
     async function getData(status) {
 
-        const res = await fetch(publicRuntimeConfig.DEV_URL + '/researchers/changeExperimentStatus',
+        const res = await fetch(publicRuntimeConfig.DEV_URL + 'researchers/changeExperimentStatus',
             {
                 body: JSON.stringify({ "id": props.experimentId, "status": status, "jwt": cookie.auth }),
                 headers: {

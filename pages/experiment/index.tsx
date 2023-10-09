@@ -20,7 +20,7 @@ const Manage: NextPage<Props> = ({ experimentId }) => {
 	const jwt = cookies?.auth || "";
 
 	const linkApi = publicRuntimeConfig.DEV_URL;
-	const link = linkApi + '/researchers/getExperimentById?id=' + experimentId;
+	const link = linkApi + 'researchers/getExperimentById?id=' + experimentId;
 	const { data, error } = useSWR({ link, jwt }, fetcher);
 
 	const mapColor = {

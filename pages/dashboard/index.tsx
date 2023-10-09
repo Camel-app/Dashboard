@@ -13,7 +13,7 @@ const Manage: NextPage = () => {
 	const [cookies] = useCookies(["auth"]);
 	const jwt = cookies?.auth || "";
 	const linkApi = publicRuntimeConfig.DEV_URL;
-	const link = linkApi + '/researchers/getExperimentByAuthor';
+	const link = linkApi + 'researchers/getExperimentByAuthor';
 	const { data, error } = useSWR({ link, jwt }, fetcher);
 
 	if (error) {

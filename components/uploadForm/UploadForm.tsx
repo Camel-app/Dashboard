@@ -27,7 +27,7 @@ const UploadForm = () => {
 		setOpened(false)
 
 		const res = await fetch(
-			publicRuntimeConfig.DEV_URL + '/researchers/addExperiment',
+			publicRuntimeConfig.DEV_URL + 'researchers/addExperiment',
 			{
 				body: JSON.stringify(body),
 				headers: {

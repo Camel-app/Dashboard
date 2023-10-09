@@ -20,7 +20,7 @@ async function downloadData(props, cookie) {
             'Content-Type': 'application/json',
         }
     }
-    const res = await fetch(publicRuntimeConfig.DEV_URL + '/researchers/getExperimentById?id=' + experimentId, info);
+    const res = await fetch(publicRuntimeConfig.DEV_URL + 'researchers/getExperimentById?id=' + experimentId, info);
     const resData = await res.json();
 
     // Convert object to Blob
@@ -51,7 +51,7 @@ async function deleteExperiment(props, cookie) {
             'Content-Type': 'application/json',
         }
     }
-    const res = await fetch(publicRuntimeConfig.DEV_URL + '/researchers/deleteExperiment', info);
+    const res = await fetch(publicRuntimeConfig.DEV_URL + 'researchers/deleteExperiment', info);
     const resData = await res.json();
     console.log(resData);
     
