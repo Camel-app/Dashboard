@@ -11,6 +11,7 @@ export function Metrics({ data }) {
     // get all values of all nodes
     var arrayValuesNodes = [];
     var arrayDatesCAMs = [];
+    console.log("data", data);
 
     data.daughters.forEach(daughter => {
 

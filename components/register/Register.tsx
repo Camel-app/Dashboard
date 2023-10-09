@@ -22,7 +22,7 @@ const Register = () => {
 		};
 
 		const res = await fetch(
-			publicRuntimeConfig.DEV_URL + '/researchers/login',
+			publicRuntimeConfig.DEV_URL + 'researchers/login',
 			{
 				body: JSON.stringify(body),
 				headers: {
